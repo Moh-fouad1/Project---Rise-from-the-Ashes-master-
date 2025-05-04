@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://uh462ed4uixh"]
+
+[ext_resource type="Script" path="res://camera_handler.gd" id="1_54ubd"]
+
+[node name="CameraHandler" type="Node2D"]
+script = ExtResource("1_54ubd")
+
+[node name="shake" type="Timer" parent="."]
+one_shot = true
+
+[node name="move" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="move" to="." method="_on_move_timeout"]

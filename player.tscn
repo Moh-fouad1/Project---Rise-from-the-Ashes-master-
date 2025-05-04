@@ -1,0 +1,350 @@
+[gd_scene load_steps=39 format=3 uid="uid://c5fcsyr0qilmn"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_6ogng"]
+[ext_resource type="PackedScene" uid="uid://fggy11bjxg0p" path="res://flames.tscn" id="2_51aj4"]
+[ext_resource type="Texture2D" uid="uid://cu3qin4y28ixd" path="res://assets/pheonix_idle.png" id="2_ec43s"]
+[ext_resource type="Texture2D" uid="uid://2qfm1kspkr82" path="res://assets/pheonix_dash_spritesheet.png" id="2_hqf8s"]
+[ext_resource type="PackedScene" uid="uid://4qhn575bdqwd" path="res://minorframes.tscn" id="3_2trc7"]
+[ext_resource type="AudioStream" uid="uid://bnuhcksmw5if5" path="res://audio/undet/hitHurt.wav" id="3_dkswt"]
+[ext_resource type="Texture2D" uid="uid://o24hudxa3igm" path="res://assets/pheonix_fall_spritesheet.png" id="3_fac0x"]
+[ext_resource type="Texture2D" uid="uid://bjrvldpo5rj60" path="res://assets/pheonix_run_spritesheet.png" id="4_12nwq"]
+[ext_resource type="AudioStream" uid="uid://p13bxt1xnoij" path="res://audio/undet/click.wav" id="4_l583a"]
+[ext_resource type="AudioStream" uid="uid://duqel6bp38h6t" path="res://audio/undet/explosion.wav" id="5_trgde"]
+[ext_resource type="AudioStream" uid="uid://coy7alibqvy1b" path="res://audio/undet/land.wav" id="5_v871l"]
+[ext_resource type="Texture2D" uid="uid://dk84uvr7it575" path="res://assets/pheonix_walljump_spritesheet.png" id="6_8tvnp"]
+[ext_resource type="AudioStream" uid="uid://bt1124o0c5rbd" path="res://audio/undet/afterdash.wav" id="6_0041d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo88o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj1i6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1qrky"]
+radius = 44.2626
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vemy7"]
+size = Vector2(2.135, 19.844)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pce73"]
+atlas = ExtResource("2_hqf8s")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_355ps"]
+atlas = ExtResource("2_hqf8s")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qwt3"]
+atlas = ExtResource("2_hqf8s")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8jio"]
+atlas = ExtResource("2_hqf8s")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od5yy"]
+atlas = ExtResource("3_fac0x")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j2xn"]
+atlas = ExtResource("3_fac0x")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q46e"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk1lg"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b8kn"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3qpf"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tnvn"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bscfi"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4r7c"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3rsb"]
+atlas = ExtResource("2_ec43s")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kko1o"]
+atlas = ExtResource("4_12nwq")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfjae"]
+atlas = ExtResource("4_12nwq")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1bt3"]
+atlas = ExtResource("4_12nwq")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h66k"]
+atlas = ExtResource("4_12nwq")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6mxkb"]
+animations = [{
+"frames": [{
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_pce73")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_355ps")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_1qwt3")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_u8jio")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_od5yy")
+}, {
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_3j2xn")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q46e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk1lg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b8kn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3qpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tnvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bscfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4r7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3rsb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_kko1o")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_mfjae")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_q1bt3")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_0h66k")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8tvnp")
+}],
+"loop": true,
+"name": &"wall_slide",
+"speed": 5.0
+}]
+
+[sub_resource type="Shader" id="Shader_nwh2m"]
+code = "shader_type canvas_item;
+
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	float dis = distance(vec2(0.5,0.5),UV);
+	if(dis > 0.5){
+		COLOR.a = 0.;
+	}
+	else{
+		COLOR.a = (0.5 - dis) * 0.1;
+	}
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60jku"]
+shader = SubResource("Shader_nwh2m")
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(1.45758, 1.45758)
+script = ExtResource("1_6ogng")
+speed = 50.0
+jumpheight = 400.0
+rising_speed = 1200.0
+rising_finish_speed = 300.0
+max_speed = 350.0
+max_fall_speed = 850.0
+wall_slide_speed = 100.0
+dash_color = Color(0.705882, 0.231373, 0.156863, 1)
+no_dash_color = Color(0.161945, 0.298023, 0.47451, 1)
+
+[node name="flames" parent="." instance=ExtResource("2_51aj4")]
+emitting = false
+
+[node name="minorframes" parent="." instance=ExtResource("3_2trc7")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jo88o")
+
+[node name="rising" type="Timer" parent="."]
+wait_time = 0.37
+one_shot = true
+
+[node name="flamestime" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="firedetect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="firedetect"]
+shape = SubResource("RectangleShape2D_kj1i6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="jump" type="Node" parent="."]
+
+[node name="cyote" type="Timer" parent="jump"]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[node name="buffer" type="Timer" parent="jump"]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[node name="pause" type="Timer" parent="."]
+process_mode = 3
+wait_time = 0.16
+one_shot = true
+
+[node name="dash" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 33.0
+offset_bottom = 33.0
+scale = Vector2(0.469055, 0.469055)
+
+[node name="fire" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire"]
+shape = SubResource("CircleShape2D_1qrky")
+
+[node name="walldetect" type="Node2D" parent="."]
+
+[node name="right" type="Area2D" parent="walldetect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walldetect/right"]
+position = Vector2(10.3246, 0.078125)
+shape = SubResource("RectangleShape2D_vemy7")
+
+[node name="left" type="Area2D" parent="walldetect"]
+position = Vector2(-20.4758, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walldetect/left"]
+position = Vector2(10.3246, 0.078125)
+shape = SubResource("RectangleShape2D_vemy7")
+
+[node name="wall_jump" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="PheonixBro" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.23159, -5.01278)
+scale = Vector2(0.907501, 0.899292)
+sprite_frames = SubResource("SpriteFrames_6mxkb")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.539382
+
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="dash" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("3_dkswt")
+volume_db = -10.0
+pitch_scale = 1.5
+
+[node name="jump" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("4_l583a")
+volume_db = -30.0
+pitch_scale = 0.6
+
+[node name="land" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("5_v871l")
+volume_db = -25.0
+pitch_scale = 0.4
+
+[node name="dashcharge" type="AudioStreamPlayer" parent="sounds"]
+process_mode = 3
+stream = ExtResource("5_trgde")
+volume_db = -20.0
+pitch_scale = 2.0
+
+[node name="afterdash" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("6_0041d")
+volume_db = -20.0
+pitch_scale = 2.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_60jku")
+offset_left = -74.4526
+offset_top = -75.675
+offset_right = 73.5474
+offset_bottom = 72.325
+
+[connection signal="area_entered" from="firedetect" to="." method="_on_firedetect_area_entered"]
+[connection signal="timeout" from="pause" to="." method="_on_pause_timeout"]
+[connection signal="timeout" from="wall_jump" to="." method="_on_wall_jump_timeout"]
