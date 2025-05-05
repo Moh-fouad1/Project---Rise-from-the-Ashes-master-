@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://8akpuwdod4h8"]
 
 [ext_resource type="FontFile" uid="uid://xtr6xeqnjwch" path="res://VCR_OSD_MONO_1.001.ttf" id="1_3y43a"]
-[ext_resource type="Script" path="res://UI/UIMenu.gd" id="1_dbhs1"]
+[ext_resource type="Script" uid="uid://cppq4gxbavoa5" path="res://UI/UIMenu.gd" id="1_dbhs1"]
 [ext_resource type="PackedScene" uid="uid://5mfkfjv1f073" path="res://UI/button.tscn" id="2_uxhp1"]
 [ext_resource type="AudioStream" uid="uid://dmlmlg14pwavj" path="res://audio/Thud Sound Effect.wav" id="3_337oq"]
 

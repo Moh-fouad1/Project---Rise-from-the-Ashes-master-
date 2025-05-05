@@ -39,7 +39,7 @@ turbulence_initial_displacement_max = 1.49012e-06
 [node name="minorframes" type="GPUParticles2D"]
 emitting = false
 amount = 70
-process_material = SubResource("ParticleProcessMaterial_u4phj")
 lifetime = 2.0
 preprocess = 0.3
 visibility_rect = Rect2(-80.0091, -66.6557, 159.821, 431.872)
+process_material = SubResource("ParticleProcessMaterial_u4phj")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://5mfkfjv1f073"]
 
-[ext_resource type="Script" path="res://UI/button.gd" id="1_10yid"]
+[ext_resource type="Script" uid="uid://cblg8p6hk2hpk" path="res://UI/button.gd" id="1_10yid"]
 [ext_resource type="FontFile" uid="uid://xtr6xeqnjwch" path="res://VCR_OSD_MONO_1.001.ttf" id="2_nwbvb"]
 [ext_resource type="AudioStream" uid="uid://dln6riynxfsqs" path="res://crow.wav" id="3_3clrk"]
 [ext_resource type="AudioStream" uid="uid://bsbav2hyoan1p" path="res://USA Anthem but it has gunshots, eagles sounds, and patriotism.mp3" id="4_a8cv3"]
@@ -111,9 +111,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6imgp"]
 _data = {
-"RESET": SubResource("Animation_wrhll"),
-"select": SubResource("Animation_knefm"),
-"unselect": SubResource("Animation_wht4c")
+&"RESET": SubResource("Animation_wrhll"),
+&"select": SubResource("Animation_knefm"),
+&"unselect": SubResource("Animation_wht4c")
 }
 
 [node name="button" type="Node2D"]
@@ -140,7 +140,7 @@ scale = Vector2(0.383355, 0.383355)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6imgp")
+&"": SubResource("AnimationLibrary_6imgp")
 }
 
 [node name="select" type="AudioStreamPlayer" parent="."]

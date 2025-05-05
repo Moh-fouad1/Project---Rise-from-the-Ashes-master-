@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dfo6qkbdc3pk8"]
 
-[ext_resource type="Script" path="res://UI/UIMenu.gd" id="1_ju2xb"]
+[ext_resource type="Script" uid="uid://cppq4gxbavoa5" path="res://UI/UIMenu.gd" id="1_ju2xb"]
 [ext_resource type="PackedScene" uid="uid://5mfkfjv1f073" path="res://UI/button.tscn" id="2_bdnqi"]
 [ext_resource type="FontFile" uid="uid://xtr6xeqnjwch" path="res://VCR_OSD_MONO_1.001.ttf" id="3_3p476"]
 
@@ -71,12 +71,11 @@ text = "THE DASHES"
 label_settings = SubResource("LabelSettings_vxt5c")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 24.0
-offset_top = 664.0
-offset_right = 418.0
-offset_bottom = 705.0
-text = "Programming: Mahmoud Fathy
-Art and Music: Ahmed Fathy"
+offset_left = 10.0
+offset_top = 678.0
+offset_right = 404.0
+offset_bottom = 719.0
+text = "Made by : Mohamed Fouad"
 label_settings = SubResource("LabelSettings_50ivm")
 
 [connection signal="Press" from="buttons/button" to="event" method="_on_button_press"]

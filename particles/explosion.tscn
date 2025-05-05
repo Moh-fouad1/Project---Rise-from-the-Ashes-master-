@@ -39,7 +39,7 @@ turbulence_initial_displacement_max = 1.49012e-06
 [node name="explosion" type="GPUParticles2D"]
 emitting = false
 amount = 1000
-process_material = SubResource("ParticleProcessMaterial_uy66e")
 one_shot = true
 explosiveness = 1.0
 randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_uy66e")

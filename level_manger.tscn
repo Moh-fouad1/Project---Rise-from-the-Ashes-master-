@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://bd5kexc601vxk"]
 
-[ext_resource type="Script" path="res://level_manger.gd" id="1_0iq53"]
+[ext_resource type="Script" uid="uid://0h1q14ywx1kg" path="res://level_manger.gd" id="1_0iq53"]
 [ext_resource type="PackedScene" uid="uid://dybub2e8c5acg" path="res://timer_manger.tscn" id="2_vbynv"]
 [ext_resource type="AudioStream" uid="uid://b71tedkg88013" path="res://audio/pheonix game ost or smthV2.wav" id="3_puqb3"]
 [ext_resource type="AudioStream" uid="uid://cd2p3cmj3ik31" path="res://audio/select.wav" id="4_c8yrs"]
@@ -76,8 +76,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xe2re"]
 _data = {
-"RESET": SubResource("Animation_htmmm"),
-"switch": SubResource("Animation_54gl3")
+&"RESET": SubResource("Animation_htmmm"),
+&"switch": SubResource("Animation_54gl3")
 }
 
 [sub_resource type="Shader" id="Shader_ohnt6"]
@@ -121,7 +121,7 @@ resource_name = "score"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4n3tp"]
 _data = {
-"score": SubResource("Animation_ggn55")
+&"score": SubResource("Animation_ggn55")
 }
 
 [node name="LevelManger" type="Node2D"]
@@ -136,7 +136,7 @@ volume_db = -28.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_xe2re")
+&"": SubResource("AnimationLibrary_xe2re")
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -205,7 +205,7 @@ layer = -99
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_4n3tp")
+&"": SubResource("AnimationLibrary_4n3tp")
 }
 
 [node name="vectory" type="AudioStreamPlayer" parent="."]
